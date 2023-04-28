@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.QichezulinDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.QichezulinEntity" id="qichezulinMap">
+        <result property="dingdanbianhao" column="dingdanbianhao"/>
+        <result property="qichebianhao" column="qichebianhao"/>
+        <result property="qichepinpai" column="qichepinpai"/>
+        <result property="qichexinghao" column="qichexinghao"/>
+        <result property="chepaihao" column="chepaihao"/>
+        <result property="yanse" column="yanse"/>
+        <result property="qicheleixing" column="qicheleixing"/>
+        <result property="yajin" column="yajin"/>
+        <result property="rizujiage" column="rizujiage"/>
+        <result property="zulinshijian" column="zulinshijian"/>
+        <result property="qichezhuangtai" column="qichezhuangtai"/>
+        <result property="yonghuzhanghao" column="yonghuzhanghao"/>
+        <result property="xingming" column="xingming"/>
+        <result property="shoujihaoma" column="shoujihaoma"/>
+        <result property="shenfenzhenghao" column="shenfenzhenghao"/>
+        <result property="sfsh" column="sfsh"/>
+        <result property="shhf" column="shhf"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.QichezulinVO" >
+		SELECT * FROM qichezulin  qichezulin         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.QichezulinVO" >
+		SELECT  qichezulin.* FROM qichezulin  qichezulin 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.QichezulinView" >
+
+		SELECT  qichezulin.* FROM qichezulin  qichezulin 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.QichezulinView" >
+		SELECT * FROM qichezulin  qichezulin <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>

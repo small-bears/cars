@@ -1,0 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: radial-gradient(ellipse farthest-corner at center top, #000d4d 0%, #000105 100%);;
+}

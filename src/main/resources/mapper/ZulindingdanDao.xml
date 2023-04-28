@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.ZulindingdanDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.ZulindingdanEntity" id="zulindingdanMap">
+        <result property="dingdanbianhao" column="dingdanbianhao"/>
+        <result property="qichebianhao" column="qichebianhao"/>
+        <result property="qichepinpai" column="qichepinpai"/>
+        <result property="qichexinghao" column="qichexinghao"/>
+        <result property="chepaihao" column="chepaihao"/>
+        <result property="yanse" column="yanse"/>
+        <result property="qicheleixing" column="qicheleixing"/>
+        <result property="yajin" column="yajin"/>
+        <result property="zulinshijian" column="zulinshijian"/>
+        <result property="rizujiage" column="rizujiage"/>
+        <result property="guihaishijian" column="guihaishijian"/>
+        <result property="zulintianshu" column="zulintianshu"/>
+        <result property="zongjine" column="zongjine"/>
+        <result property="yonghuzhanghao" column="yonghuzhanghao"/>
+        <result property="xingming" column="xingming"/>
+        <result property="shoujihaoma" column="shoujihaoma"/>
+        <result property="shenfenzhenghao" column="shenfenzhenghao"/>
+        <result property="yewuyuanzhanghao" column="yewuyuanzhanghao"/>
+        <result property="yewuyuanxingming" column="yewuyuanxingming"/>
+        <result property="ispay" column="ispay"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.ZulindingdanVO" >
+		SELECT * FROM zulindingdan  zulindingdan         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.ZulindingdanVO" >
+		SELECT  zulindingdan.* FROM zulindingdan  zulindingdan 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.ZulindingdanView" >
+
+		SELECT  zulindingdan.* FROM zulindingdan  zulindingdan 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.ZulindingdanView" >
+		SELECT * FROM zulindingdan  zulindingdan <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+    <select id="selectValue" resultType="map" >
+        SELECT ${params.xColumn}, sum(${params.yColumn}) total FROM zulindingdan
+        <where> 1=1 ${ew.sqlSegment}</where>
+        group by ${params.xColumn}
+    </select>
+
+    <select id="selectTimeStatValue" resultType="map" >
+        <if test = 'params.timeStatType == "日"'>
+                SELECT DATE_FORMAT(${params.xColumn},'%Y-%m-%d') ${params.xColumn}, sum(${params.yColumn}) total FROM zulindingdan
+                <where> 1=1 ${ew.sqlSegment}</where>
+                group by DATE_FORMAT(${params.xColumn},'%Y-%m-%d')
+        </if>
+        <if test = 'params.timeStatType == "月"'>
+                SELECT DATE_FORMAT(${params.xColumn},'%Y-%m') ${params.xColumn}, sum(${params.yColumn}) total FROM zulindingdan
+                <where> 1=1 ${ew.sqlSegment}</where>
+                group by DATE_FORMAT(${params.xColumn},'%Y-%m')
+        </if>
+        <if test = 'params.timeStatType == "年"'>
+                SELECT DATE_FORMAT(${params.xColumn},'%Y') ${params.xColumn}, sum(${params.yColumn}) total FROM zulindingdan
+                <where> 1=1 ${ew.sqlSegment}</where>
+                group by DATE_FORMAT(${params.xColumn},'%Y')
+        </if>
+    </select>
+
+    <select id="selectGroup" resultType="map" >
+        SELECT ${params.column} , count(1) total FROM zulindingdan
+        <where> 1=1 ${ew.sqlSegment}</where>
+        group by ${params.column}
+    </select>
+</mapper>

@@ -1,0 +1,13 @@
+#canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background: hsla(0, 5%, 5%, 1);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: linear-gradient(to right top, hsla(0, 5%, 15%, 0.5), hsla(0, 5%, 5%, 1));
+	background-image: -moz-linear-gradient(to right top, hsla(0, 5%, 15%, 0.5), hsla(0, 5%, 5%, 1));
+}
