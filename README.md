@@ -18,21 +18,18 @@
 
 #### 所有项目以及源代码本人均调试运行无问题 可支持远程调试运行
 
-# cars
-基于SpringBoot Vue汽车租赁系统
+
 ## 一、 项目介绍
-基于SpringBoot Vue的汽车租赁系统
+(协同过滤推荐算法)基于SpringBoot的校园招聘推荐系统分为前台用户、后台模块（管理员、看板），各角色功能如下：
 
-角色：管理员、业务员、用户
-
-管理员： 管理员登录系统后，可以对首页，个人中心，用户管理，业务员管理，汽车类型管理，租赁汽车管理，汽车租赁管理，汽车归还管理，租赁订单管理，检查信息管理，系统管理
-
-业务员：登录进入致远汽车租赁系统可以对首页，个人中心，汽车租赁管理，汽车归还管理，租赁订单管理，检查信息管理等
-
-用户：用户登录进入致远汽车租赁系统可以对首页，个人中心，汽车租赁管理，汽车归还管理，租赁订单管理，检查信息管理，我的收藏管理等
-## 二、 视频演示
-
-<p style="text-align: center;"><strong><span class="ne-text">建议点击这个</span><a style="color: #ff0000;" href="https://www.bilibili.com/video/BV1vx4y1P7nQ/?spm_id_from=333.999.0.0&vd_source=b5789de9f485ad6d0cfaeca1ad4b230c">“链接”</a>查看高清视频</strong></p>
+1. 前台用户
+可使用功能：首页、职位招聘、培训活动、公告资讯、个人中心（含修改密码、简历投递、面试通知、参加面试、面试结果、培训报名、薪资发放、我的收藏）
+2. 管理员（后台模块）
+管理类功能：主页、用户管理、职位类型管理、职位招聘管理、简历投递管理、面试通知管理、参加面试管理、面试结果管理、培训类型管理、培训活动管理、培训报名管理、薪资发放管理、系统管理、个人中心
+3. 看板（后台模块）
+统计类功能：职位类型统计、简历统计、面试结果统计、职位招聘统计、员工薪资统计、地区统计、学历统计
+## 二、 视频演示（点击就可以看到）
+https://www.bilibili.com/video/BV1mmyaB1EAF/?spm_id_from=333.1387.search.video_card.click&vd_source=e51e8ec2fb03314ad9fa517492a2ce94
 
 
 ## 三、项目技术
@@ -56,9 +53,5 @@ JDK版本：1.8
 项目管理：Maven
 
 ## 五、运行截图
-![1678942374314](https://user-images.githubusercontent.com/124327024/235069166-5edcf2e5-08ac-4cf0-93d4-31c01a7125d3.jpg)
-![1678941026086](https://user-images.githubusercontent.com/124327024/235069170-f90ef3b4-fea3-46a2-be5b-cbcbb8699637.jpg)
-![1678941046424](https://user-images.githubusercontent.com/124327024/235069175-8bed04e3-331d-492f-a3bb-c289d112d883.jpg)
-![1678941137341](https://user-images.githubusercontent.com/124327024/235069184-e071c1ca-4597-49f6-a765-b36c2c1823ef.jpg)
-![1678941147502](https://user-images.githubusercontent.com/124327024/235069186-9f89c382-d6ba-43df-a187-638bf50e9f05.jpg)
-![1678941155986](https://user-images.githubusercontent.com/124327024/235069191-e4a85e55-6330-4c37-a678-38af13352f2f.jpg)
+https://www.bilibili.com/video/BV1mmyaB1EAF/?spm_id_from=333.1387.search.video_card.click&vd_source=e51e8ec2fb03314ad9fa517492a2ce94
+
